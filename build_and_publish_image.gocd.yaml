@@ -30,7 +30,7 @@ pipelines:
                 configuration:
                   options:
                     Image: suresh528kumar/bulletin-board
-                    Tag: ${GO_PIPELINE_LABEL}
+                    Tag: v1
             tasks:
             - exec:
                 arguments:
