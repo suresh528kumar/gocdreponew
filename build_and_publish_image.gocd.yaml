@@ -29,12 +29,12 @@ pipelines:
                 store_id: dockerhub
                 configuration:
                   options:
-                    Image: ${DOCKERHUB_USERNAME}/bulletin-board
+                    Image: bulletin-board
                     Tag: ${GO_PIPELINE_LABEL}
             tasks:
             - exec:
                 arguments:
                 - -c
-                - docker build -t $DOCKERHUB_USERNAME/bulletin-board:$GO_PIPELINE_LABEL . -f Dockerfile.application
+                - docker build -t bulletin-board:$GO_PIPELINE_LABEL . -f Dockerfile.application
                 command: /bin/bash
                 run_if: passed
